@@ -7,51 +7,33 @@ const ExpenseForm = (props) => {
   const[enteredPrice,setEnteredPrice] = useState('');
   const[enteredDate,setEnteredDate] = useState('');
 
-  // const [userInput, setUserInput] = useState({
-  //   enteredTitle: "",
-  //   enteredPrice: "",
-  //   enteredDate: "",
-  // });
 
   const titleChangeHandler = (e) => {
     setEnteredTitle(e.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   enteredTitle: e.target.value
-    // });
 
-    //safer way to do when states depend on previous states
-    // setUserInput((prevState) => {
-      // return { ...prevState, enteredTitle: e.target.value };
-  //   };
   };
 
   const priceChangeHandler = (e) => {
     setEnteredPrice(e.target.value);
-    // setUserInput((prevState) => {
-      // return { ...prevState, enteredPrice: e.target.value };
-    //};
+
   };
 
   const dateChangeHandler = (e) => {
     setEnteredDate(e.target.value);
-    // setUserInput((prevState) => {
-    //   return { ...prevState, enteredDate: e.target.value };
-    // });
+
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    //creating an object to store added date
     const expenseData = {
       title: enteredTitle,
       amount: enteredPrice,
       date: new Date(enteredDate)
     };
-    //we have to clear inputs after hit the submit button
+    //clearing inputs after form submission
     
-    //executing function //important
+    //execute function
     props.onSaveExpenseData(expenseData);
 
     setEnteredTitle('');

@@ -6,9 +6,8 @@ import ExpenseItems from "./ExpenseItem.css";
 import Card from "../UI/card";
 const Items = (props) => {
   const [title, setTitle] = useState(props.title);
-  // console.log('it will run 4 times because we have 4 items on component')       
 
-    //React ile event listener kullanimi
+    //using event listeners with React
     const clickHandler = () => {
       setTitle('updated!');
     }
