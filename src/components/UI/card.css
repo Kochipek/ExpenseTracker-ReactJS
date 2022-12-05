@@ -1,4 +1,5 @@
 .card{
+overflow: hidden;
 border-radius: 12px;
 box-shadow: 0 1px 8px rgb(73, 71, 71);
 };
