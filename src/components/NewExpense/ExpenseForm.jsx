@@ -65,6 +65,7 @@ const ExpenseForm = (props) => {
             type="number"
             step="0.01"
             min="0"
+            max = "10000"
             value={enteredPrice}
             placeholder="Enter a price"
             onChange={priceChangeHandler}
