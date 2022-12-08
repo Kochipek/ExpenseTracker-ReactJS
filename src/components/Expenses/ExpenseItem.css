@@ -9,7 +9,7 @@
   align-items: center;
   padding: 0.5rem;
   margin: 1rem 3rem;
-  background-color: #989898;
+  background-color: #bdbdbd;
 }
 
 .expense-item__title {
@@ -23,11 +23,10 @@
 }
 
 .expense-item h2 {
-  color: #3a3a3a;
+  color: #252525;
   font-size: 1rem;
   flex: 1;
   margin: 0 1rem;
-  color: #780707;
 }
 
 .expense-item:hover{
@@ -37,11 +36,13 @@
 .expense-item__price {
   font-size: 1rem;
   font-weight: bold;
-  color: rgb(255, 255, 255);
-  background-color: #3f3f3f80;
-  border: 1px solid #515050;
-  padding: 0.5rem;
+  color: rgb(148, 23, 23);
   border-radius: 12px;
+  border-radius: 12px;
+  background: #bdbdbd;
+  box-shadow: inset 5px 5px 5px #aeaeae,
+              inset -3px -3px 3px #cccccc;
+
 }
 
 @media (min-width: 580px) {

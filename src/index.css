@@ -9,8 +9,9 @@ html {
 }
 
 body {
+  color: #252525;
   margin: 0;
-  background-color: #1c1c24;
+  background-color: #252525;
 }
 p{
   color:white;

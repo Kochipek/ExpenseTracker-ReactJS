@@ -1,6 +1,5 @@
 .expenses-filter {
-
-    color: white;
+    color: #bdbdbd;
     padding: 0 1rem;
   }
   
@@ -18,6 +17,8 @@
   }
   
   .expenses-filter select {
+    color: #252525;
+    background-color:#e1e1e1;
     font: inherit;
     padding: 0.5rem 3rem;
     font-weight: bold;
