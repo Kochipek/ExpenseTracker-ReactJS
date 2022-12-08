@@ -38,7 +38,7 @@
   font-weight: bold;
   color: rgb(148, 23, 23);
   border-radius: 12px;
-  border-radius: 12px;
+  padding: 10px;
   background: #bdbdbd;
   box-shadow: inset 5px 5px 5px #aeaeae,
               inset -3px -3px 3px #cccccc;

@@ -2,7 +2,7 @@ import "./ExpenseForm.css";
 import React, { useState } from "react";
 
 const ExpenseForm = (props) => {
-  //method1
+
   const[enteredTitle,setEnteredTitle] = useState('');
   const[enteredPrice,setEnteredPrice] = useState('');
   const[enteredDate,setEnteredDate] = useState('');
@@ -28,7 +28,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredPrice,
+      amount: +enteredPrice,
       date: new Date(enteredDate)
     };
     //clearing inputs after form submission
@@ -53,7 +53,7 @@ const ExpenseForm = (props) => {
             placeholder="Enter a product"
             value={enteredTitle}
             onChange={titleChangeHandler}
-            required
+            
           />
         </div>
       </div>
@@ -68,7 +68,7 @@ const ExpenseForm = (props) => {
             value={enteredPrice}
             placeholder="Enter a price"
             onChange={priceChangeHandler}
-            required
+            
           />
         </div>
       </div>
@@ -78,16 +78,17 @@ const ExpenseForm = (props) => {
           <label>Date</label>
           <input
             type="date"
-            min="01-01-2019"
-            max="01-12-2022"
+            min="01.01.2019"
+            max="30.12.2022"
             value={enteredDate}
             onChange={dateChangeHandler}
-            required
+            
           />
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="submit">Submit</button>
+      <button type="submit">Submit</button>
+     <button type="button" onClick={props.onCancel}>Close</button>
       </div>
     </form>
   );

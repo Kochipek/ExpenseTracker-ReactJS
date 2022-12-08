@@ -1,0 +1,15 @@
+.chart {
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: #dadada;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    height: 10rem;
+    width: 80%;
+  }
+
+  .ChartBox{
+    display:flex;
+    justify-content: center;
+  }
