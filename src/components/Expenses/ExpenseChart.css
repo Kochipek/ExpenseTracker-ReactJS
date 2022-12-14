@@ -1,20 +1,10 @@
-.expenses {
-    padding: 1rem;
-    border-radius: 12px;
-    background: #252525;
-    box-shadow:  6px 6px 11px #171717,
-                 -6px -6px 11px #333333;    margin: 2rem auto;
-    width: 50rem;
-    max-width: 95%;
-   
-  }
-
-  .buttonBox {
+.chartButtonBox{
     display:flex;
     justify-content: center;
     align-items: center;
-  }
-  .openChartButton {
+    margin: 1rem;
+}
+.chartCloseButton {
     font: inherit;
     cursor: pointer;
     padding: 1rem 2rem;
@@ -25,4 +15,10 @@
     border-radius: 12px;
     margin-right: 1rem;
     width: 10rem;
+  }
+  
+  button:hover,
+  button:active {
+    border: 2px solid rgb(255, 255, 255);
+        
   }

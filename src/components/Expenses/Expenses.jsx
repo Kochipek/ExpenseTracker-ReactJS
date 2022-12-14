@@ -15,19 +15,32 @@ const Expenses = (props) => {
   const filteredExpenses = props.items.filter((expense) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
+  const [isEditing, setIsEditing] = useState(false);
 
+  const chartOpeningHandler = () => {
+      setIsEditing(true);
+  }
+  const chartClosingHandler = () => {
+      setIsEditing(false);
+  }
   return (
+    
     <div>
+
       <Card className="expenses">
         <ExpensesFilter
           selected={filteredYear}
           onChangeYear={filterChangeHandler}
         />
-      <ExpensesChart expenses={filteredExpenses}/>
+        <div className = 'buttonBox'>
+      { !isEditing && <button className = 'openChartButton' onClick={chartOpeningHandler}> Show Chart </button>}
+      </div>
+     {isEditing && <ExpensesChart expenses={filteredExpenses} onCloseChart={chartClosingHandler}/>}
         <ExpensesList items={filteredExpenses} />
       </Card>
 
     </div>
+
   );
 };
 

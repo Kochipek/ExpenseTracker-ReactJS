@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from "react";
 import Chart from '../Chart/Chart'
+import './ExpenseChart.css'
 
 const ExpensesChart = (props) => {
     const chartDataPoints = [
@@ -22,7 +23,13 @@ const ExpensesChart = (props) => {
         const expenseMonth = expense.date.getMonth();
         chartDataPoints[expenseMonth].value += expense.amount;
     }
-return <Chart dataPoints={chartDataPoints} />
-}
-
+return (
+    <div> 
+<Chart dataPoints={chartDataPoints}/>
+<div className = "chartButtonBox"> 
+    <button className = "chartCloseButton" onClick={props.onCloseChart}>Close</button>
+    </div>
+ </div>
+)
+};
 export default ExpensesChart;
