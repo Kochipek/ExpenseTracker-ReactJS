@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Chart from '../Chart/Chart'
 import './ExpenseChart.css'
 
